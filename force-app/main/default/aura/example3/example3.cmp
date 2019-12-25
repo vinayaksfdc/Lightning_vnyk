@@ -1,0 +1,7 @@
+<aura:component controller="example3">
+    <aura:attribute name="optyList" type="list"/>
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}"/>
+    <aura:iteration items="{!v.optyList}" var="a">
+        <p> {!a.Name} &nbsp;&nbsp;&nbsp;{!a.stageName}</p>
+    </aura:iteration>
+</aura:component>

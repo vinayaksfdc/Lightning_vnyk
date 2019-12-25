@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="nam" type="string" default="this is"/>
+    
+    <aura:attribute name="nam1" type="string"/>
+    
+     <lightning:input type="string" name="input1" label="Enter details" value="{!v.nam1}" />
+    <div class="white">
+    <ul>    
+   <li class="red">  <p>Hellow world </p>   </li>
+    <li class="green">  <p> {!v.nam}</p>  </li>
+    <li  class="green"><p>{!v.nam1}</p> </li>
+     </ul>   
+    </div>                 
+</aura:component>

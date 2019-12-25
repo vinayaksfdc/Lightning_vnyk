@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:registerEvent name="firstCall" type="c:firstEvent" />
+    <aura:attribute name="empName" type="String" />	
+    <lightning:button label="Submit" onclick="{!c.show}" />
+    
+</aura:component>

@@ -1,0 +1,26 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+    
+    <aura:attribute name="record" type="Object"/>
+    <aura:attribute name="recordFields" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+    
+    <force:recordData aura:id="RecordCreator" 
+                      recordId="{!v.recordId}"
+                      layoutType="FULL"
+                      targetRecord="{!v.record}"
+                      targetFields="{!v.recordFields}"
+                      targetError="{!v.recordError}" />
+    
+    <div>
+        {!v.recordFields.Name}
+        {!v.recordFields.Brewery_id}<br/>
+        {!v.recordFields.ID__c}<br/>
+        {!v.recordFields.Image__c}<br/>
+        {!v.recordFields.Price__c}<br/>
+        {!v.recordFields.brewery_Name__c}<br/>
+        {!v.recordFields.Alochol__c}<br/>
+        
+        
+        
+    </div>
+</aura:component>

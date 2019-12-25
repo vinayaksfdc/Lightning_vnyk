@@ -1,0 +1,27 @@
+<aura:component>
+    
+    
+    <aura:attribute name="accid" type="Id" default="0016F00002UVHSmQAP"/><br/>
+    {!v.accid}
+    <aura:attribute name="conid" type="Id" default="0066F000013j69JQAQ"/><br/>
+    {!v.conid}
+    <aura:attribute name="oppid" type="Id" default="0036F00002dQRV1QAO"/><br/>
+    {!v.oppid}
+    
+  
+   
+       <lightning:tabset  >
+        <lightning:tab label="Item One" id="one">
+            One Content !
+        </lightning:tab>
+        <lightning:tab label="Item Two" id="two">
+            Two Content !
+        </lightning:tab>
+        <lightning:tab label="Item Three" id="three">
+            Three Content !
+        </lightning:tab>
+    </lightning:tabset>
+    
+    
+    
+</aura:component>

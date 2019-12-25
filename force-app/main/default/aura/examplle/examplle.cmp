@@ -1,0 +1,5 @@
+<aura:component >
+      <div class="container"> 
+	 Hello world!
+            </div>
+</aura:component>

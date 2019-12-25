@@ -1,0 +1,32 @@
+<aura:component controller="Example_6" >
+    <aura:attribute name="accname" type="String"/>
+    <aura:attribute name="acclist" type="Account"/>
+    
+    <lightning:input label="accname" aura:id="fname"></lightning:input>
+    
+    
+    {!v.accname}
+    
+    <lightning:button label="Submit" onclick="{!c.invoke}" />
+    
+    
+ 
+    
+
+    
+    <aura:iteration items="{!v.acclist}" var="accs1" >
+        <tr>   
+        <td> {!accs1.Name}  </td>
+         
+      <td>   {!accs1.Industry}  </td> 
+      <!--   <td>   {!accs1.Contacts.lastName}  </td> -->
+        </tr>     
+     <tr>   <aura:iteration items="{!v.accs1.contacts}" var="con1" >
+            
+             <td>{!con1.lastName} </td>
+              <td>{!con1.FirstName} </td>
+        </aura:iteration></tr>
+     </aura:iteration>                                            
+        
+    
+</aura:component>

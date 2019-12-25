@@ -1,0 +1,19 @@
+<aura:component >
+	 
+	  
+    <h1> Hello world!</h1>
+           
+      <div class="red"> 
+	 Hello world!
+            </div>
+      <div class="blue"> 
+	 Hello world!
+            </div>
+      <div class="green"> 
+	 Hello world!
+            </div>
+      <div class="yellow"> 
+	 Hello world!
+            </div>
+ 
+</aura:component>

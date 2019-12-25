@@ -1,0 +1,17 @@
+<aura:component>
+    <aura:attribute name="AccListFromEvent" type="Account[]"/>  
+    <!-- Note that name="cmpAccEvent" in aura:registerEvent in AccNotifier.cmp -->
+    <aura:handler name="cmpAccEvent" event="c:AccEvent" action="{!c.handleComponentEvent}"/>        <!-- handler contains the notifier component -->
+    <c:AccNotifier />
+    <!-- Disply Record -->
+    <div>
+        <lightning:card title="List Account">
+            <p class="slds-p-horizontal--small">
+                <aura:iteration items="{!v.AccListFromEvent}" var="acc">
+                    <br/>
+                    {!acc.Name}
+                </aura:iteration>
+            </p>
+        </lightning:card>
+    </div>
+</aura:component>

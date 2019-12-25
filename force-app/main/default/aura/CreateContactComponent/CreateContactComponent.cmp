@@ -1,0 +1,26 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="ContactRecord" type="Contact"  
+                    default="{'sobjectType':'Contact',
+                             'FirstName':'',
+                             'LastName':'',
+                             'Phone':'',
+                             }"/>
+    
+    
+    
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col  slds-size_1-of-2">
+            <lightning:input name="v.ContactRecord.FirstName" aura:id="con" label="Enter some text" />
+        </div>
+        <div class="slds-col  slds-size_1-of-2">
+            <lightning:input name="v.ContactRecord.LastName" aura:id="con"  label="Enter some text" />
+        </div>
+        <div class="slds-col  slds-size_1-of-2">
+            <lightning:input name="v.ContactRecord.Phone" aura:id="con"  label="Enter some text" />
+        </div>
+        
+  </div>
+    <lightning:button name="Add to Review" aura:id="con"  label="Add to Review" onclick="{!c.handleClick}"
+                      variant="brand"/>
+</aura:component>

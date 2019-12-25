@@ -1,0 +1,54 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+            <aura:attribute name="fields" type="String[]" default="['Name','AnnualRevenue','Industry']" />
+            <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="truthy" type="boolean" default='false'/>
+    
+                <aura:attribute name="targetRec" type="Object" />
+            <aura:attribute name="accRecord" type="Object" />
+            <aura:attribute name="error" type="String" />
+            
+
+    
+    
+     <aura:attribute name="confields" type="String[]" default="['FirstName','LastName','AccountId']" />
+    
+    		<aura:attribute name="crecordId" type="String"/>
+          
+    
+            <lightning:notificationsLibrary aura:id="notifLib"/>
+
+            <lightning:recordForm
+                    objectApiName="Account"
+                    fields="{!v.fields}"
+                    onsuccess="{!c.handleSuccess}" />
+    		     
+    		Record created successfully{!v.recordId}
+      <lightning:notificationsLibrary aura:id="notifLib"/>
+			<aura:if isTrue="{!v.truthy}">
+                
+    	
+			Record created successfully{!v.recordId}
+                <force:recordData 	aura:id="record"
+                                recordId="{!v.recordId}"  
+                                layoutType="FULL"
+                                fields="FirstName,LastName,AccountId"
+                                targetRecord="{!v.targetRec}"
+                                targetFields="{!v.accRecord}"
+                                targetError="{!v.error}"
+                                recordUpdated="{!c.handleRecordUpdated}"
+                              />
+                
+                 <p class="slds-p-horizontal_small">
+                                        <lightning:input label="FrstName" value="{!v.accRecord.FirstName}" />
+                    </p>
+                    <p class="slds-p-horizontal_small">
+                          <lightning:input label="LstName" value="{!v.accRecord.LastName}" /> 
+                    </p>
+                       <p class="slds-p-horizontal_small">
+                          <lightning:input label="AccountId" value="{!v.accRecord.AccountId}" /> 
+                    </p>
+
+    			<!-- <lightning:button label="Save" onclick="{!c.handleSuccesscont}" /> -->
+    		Record created successfully{!v.crecordId}
+   		 </aura:if>
+</aura:component>

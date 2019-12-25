@@ -1,0 +1,4 @@
+<aura:component extensible="true" controller="AccountUtil" > 
+    <aura:attribute name="message" type="String" default="Value from Parent"/>
+    {!v.body}
+</aura:component>

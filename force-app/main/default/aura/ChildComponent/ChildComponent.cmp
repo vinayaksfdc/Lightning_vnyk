@@ -1,0 +1,37 @@
+<aura:component implements="flexipage:availableForAllPageTypes" extends="c:BaseComponent"  access="global" >
+        <!-- This Example is for Inherit Component attribute-->
+        <BR></BR>
+            <div>
+                <!--
+                    Set Vaule if you want to override message value
+                    <aura:set attribute="message" value="ChildComponent is inherited in BaseComponent"/>
+                -->
+                Inherited Component attribute Value =  {!v.message}
+            </div>
+        <BR></BR>
+   
+        <!-- This Example is for Inherit Helper method-->
+        <aura:attribute name="ListAcc" type="List"/>
+        <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+        <div class="slds-align--absolute-center">
+            <table aura:id="accTable" class="slds-table slds-table--bordered slds-table--cell-buffer" cellspacing="0" width="100%">
+
+                <thead>
+                    <tr class="slds-text-title--caps">
+                        <th scope="col">Account ID</th>
+                        <th scope="col">Account name</th>
+                        <th scope="col">Account Number</th>
+                    </tr>
+                </thead>   
+                <tbody>
+                    <aura:iteration items="{!v.ListAcc}" var="acc">
+                        <tr>
+                            <td>{!acc.Id}</td>
+                            <td>{!acc.Name}</td>
+                            <td>{!acc.AccountNumber}</td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </div>          
+</aura:component>

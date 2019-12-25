@@ -1,0 +1,14 @@
+<aura:component>
+    <aura:attribute name="empname" type="integer"  />    
+    <aura:attribute name="sal" type="integer" />
+    <aura:attribute name="bonus" type="integer" />
+      <aura:attribute name="exp" type="integer" />
+	
+
+    
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}" />
+    
+    
+ 
+    
+</aura:component>

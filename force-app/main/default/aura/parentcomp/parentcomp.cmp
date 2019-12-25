@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="messageFromEvent" type="String"/> 
+    <aura:handler name="firstCall" event="c:firstEvent" action="{!c.invoke}"/> 
+    <c:childcomp /> 
+    <p>Message from Event ::&nbsp;&nbsp;{!v.messageFromEvent}</p> 
+</aura:component>

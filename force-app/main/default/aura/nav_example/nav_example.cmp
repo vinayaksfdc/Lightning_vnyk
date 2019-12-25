@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:hasPageReference,lightning:isUrlAddressable" 
+                access="global" >
+    
+    <lightning:navigation aura:id="navigate" />
+    <lightning:button label="Lightning Navigate" onclick="{!c.navigate}"
+                      variant="brand"/>
+   <lightning:button label="Lightning Related List" onclick="{!c.gotoRelatedList}" 
+                      variant="brand" />  
+    
+       <lightning:button label="Contact Lightning Related List" onclick="{!c.gotoRelatedListCon}" 
+                      variant="brand" />  
+      <lightning:button label="Opportunities Lightning Related List" onclick="{!c.gotoRelatedListOpp}" 
+                      variant="brand" />  
+    
+    <lightning:button label="Navigation" title="NavigationRec" onclick="{!c.NavigationRec}" />
+      
+    Opportunities
+</aura:component>

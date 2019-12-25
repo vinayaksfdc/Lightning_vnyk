@@ -1,0 +1,17 @@
+<aura:component>
+    <aura:attribute name="newAccount" type="Account"
+              default="{ 'sobjectType': 'Account','Name': 'Test Name'}"/>
+    <aura:registerEvent name="cmpAccEvent" type="c:AccEvent"/>
+    <p>
+        <form class="slds-form--stacked">        
+            <lightning:input aura:id="newAccountform"
+                            label="Account Name" name="AccAction"
+                            value="{!v.newAccount.Name}" />
+
+            <lightning:button label="Add Acc"
+                            class="slds-m-top--medium"
+                            variant="brand"
+                            onclick="{!c.fireComponentEvent}"/>
+        </form>
+    </p>
+</aura:component>

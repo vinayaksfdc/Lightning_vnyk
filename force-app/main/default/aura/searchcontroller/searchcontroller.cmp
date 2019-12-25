@@ -1,0 +1,5 @@
+<aura:component controller="searchcontroller">
+	Enter text    <input id="text-input-id-1" placeholder="Placeholder Text" 
+                         class="slds-input" type="text" value="" 
+                         onkeyup="{!searchkeychange}"/>
+</aura:component>

@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+    <div>
+        <lightning:button label="showToast"
+                          variant="brand"
+                          onclick="{!c.showMyToast}"/>
+        <lightning:button label="Error"
+                          variant="destructive"
+                          onclick="{!c.showError}"/>
+        <lightning:button label="Warning"
+                          variant="neutral"
+                          onclick="{!c.showWarning}"/>
+        <lightning:button label="Success"
+                          variant="success"
+                          onclick="{!c.showSuccess}"/>
+    </div> 
+</aura:component>

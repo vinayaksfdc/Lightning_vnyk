@@ -1,0 +1,11 @@
+<aura:component>
+     <aura:attribute name="empName" type="string"></aura:attribute>
+     <aura:attribute name="salary" type="Integer"></aura:attribute>
+         <aura:attribute name="bonus" type="Integer"></aura:attribute>
+     <aura:handler name="init" value="{!this}" action="{!c.show}"></aura:handler>	
+    <br/><br/><br/><br/><br/>
+    {!v.salary}<br/>
+    {!v.empName}<br/>
+    {!v.bonus}<br/>
+   
+    </aura:component>

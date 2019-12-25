@@ -1,0 +1,5 @@
+<aura:component controller="example3">
+   <aura:attribute name="filterName" type="String" default="team knights"/>
+ 		
+	    <lightning:button label="Call server" onclick="{!c.echo}"/>
+</aura:component>

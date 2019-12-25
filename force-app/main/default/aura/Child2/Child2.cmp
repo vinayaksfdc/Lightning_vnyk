@@ -1,0 +1,7 @@
+<aura:component >
+            <aura:attribute name="val1" type="String" />
+            <aura:handler event="c:secondEvent"  action="{!c.invoke}"/>
+            <div class="box">
+                Name for child_2 is : {!v.val1}
+            </div>
+ </aura:component>

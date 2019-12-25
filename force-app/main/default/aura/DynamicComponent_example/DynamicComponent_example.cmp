@@ -1,0 +1,16 @@
+<aura:component >
+    
+	<aura:attribute name="cars"  type="string[]"></aura:attribute>
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"></aura:handler>
+
+ 
+    <lightning:button variant="brand" label="Create Components" onclick="{! c.handleComponent }" />
+   
+   <!-- <aura:iteration items="{!v.cars}" var="item">
+     <p>{!item}</p>
+    </aura:iteration> -->
+    
+    
+    
+    {!v.body}
+</aura:component>

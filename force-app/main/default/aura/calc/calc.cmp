@@ -1,0 +1,22 @@
+<aura:component >
+    
+    
+    
+    <aura:attribute name="aval" type="integer" />
+    <aura:attribute name="bval" type="integer" />
+    <aura:attribute name="cval" type="integer" />
+    
+    <lightning:input type="number"   label="Enter Avalue" name="aval" value="{!v.aval}" aura:id="aval"/>
+    <lightning:input type="number"  label="Enter Bvalue" name="bval" value="{!v.bval}" aura:id="bval"/>
+    <lightning:input type="number" label="Enter Cvalue" name="cval" value="{!v.cval}" aura:id="cval"/>
+    
+    <lightning:button label="Addition" onclick="{!c.show}" />
+     <lightning:button label="subtraction" onclick="{!c.show1}" />
+     <lightning:button label="multiplication" onclick="{!c.show2}" />
+    
+   
+    	{!v.aval}
+    {!v.bval}
+    {!v.cval}
+        
+</aura:component>

@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasSObjectName,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="fieldsList" type="String[]" default="['Id', 'Name', 'BillingAddress', 'AnnualRevenue']"/>
+    <div>
+        <center>
+            <h1><b>Lightning Record Form<br/>
+                Object_Name: {!v.sObjectName} - Record_Id: {!v.recordId}
+                </b>
+            </h1>
+        </center>
+    </div>
+    <div class="THIS">        
+        <lightning:recordForm 
+                              recordId="{!v.recordId}" 
+                              objectApiName="{!v.sObjectName}"
+                              fields="{!v.fieldsList}"
+                              columns="2"
+                              mode="Edit"
+                              onsuccess="{!c.myAction}"/>
+    </div>
+</aura:component>

@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="ContactRecord" type="Contact"  /> 
+    <div>
+        <aura:iteration items="{!v.ContactRecord}" var="cons">
+            <div class="slds-col  slds-size_1-of-2">
+                {!con.FirstName}
+            </div>
+            <div class="slds-col  slds-size_1-of-2">
+                {!con.LastName}    
+            </div>
+            <div class="slds-col  slds-size_1-of-2">
+                {!con.Phone}     
+                <a href="Javascript:void(0);" onclick="{!c.RemoveRecord}">
+                    Remove</a>
+            </div>
+            
+        </aura:iteration>
+    </div>
+</aura:component>

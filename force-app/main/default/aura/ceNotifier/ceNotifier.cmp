@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:registerEvent name="firstCall" type="c:ceEvent" />
+    // firstEvent is the name of the event created
+    <lightning:button label="submit" onclick="{!c.show}" />
+</aura:component>

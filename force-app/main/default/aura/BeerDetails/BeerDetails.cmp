@@ -1,0 +1,17 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId"> >
+    <aura:attribute name="beerId" type="String">
+          
+    </aura:attribute>
+    <lightning:navigation aura:id="navigation"/>	
+    <div class="slds-p-around_small">
+        <lightning:recordForm
+                              recordId="{!v.beerId}"
+                              objectApiName="Beer__c"
+                              layoutType="Full"
+                              mode="readonly" />
+    </div>
+    <div class="slds-p-around_small">
+          <lightning:button value="Order Now" label="Order Now" variant="brand" onclick="{!c.navigateUrl}" 
+                            />
+    </div>
+</aura:component>

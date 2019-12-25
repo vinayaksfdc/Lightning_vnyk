@@ -1,0 +1,17 @@
+<aura:component >
+    <aura:attribute name="num1" type="integer"  />
+    <aura:attribute name="num2" type="integer"  />
+     <aura:attribute name="sum" type="integer"  />
+    <div>
+        
+        <lightning:input type="number"  label="Enter a number1" value="{!v.num1}" />
+        <lightning:input type="number"  label="Enter a number2" value="{!v.num2}" />
+        
+        <lightning:button label="add" onclick="{!c.show}" />
+        <lightning:button label="sub" onclick="{!c.show1}" />
+        <lightning:button label="mult" onclick="{!c.show2}" />
+        <lightning:button label="div" onclick="{!c.show3}" />
+        <br/>
+       
+    </div>    
+</aura:component>

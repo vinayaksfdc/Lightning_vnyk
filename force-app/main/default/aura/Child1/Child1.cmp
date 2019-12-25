@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="name" type="string" default="vinayak" />
+    
+            <aura:registerEvent name="one" type="c:secondEvent" />
+            <div class="box">
+            <lightning:button label="change" onclick="{!c.call}" />
+            </div>
+		</aura:component>
